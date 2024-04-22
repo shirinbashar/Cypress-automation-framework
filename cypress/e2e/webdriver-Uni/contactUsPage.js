@@ -22,7 +22,7 @@ describe("Test Contact Us form via webdriverUni",() => {
         cy.get('[name="first_name"]').type('Shirin')
         cy.get('[name="last_name"]').type('Bashar')
         cy.get('textarea.feedback-input').type('I am new to this course')
-        cy.get('[type="submit"]').click()
+        cy.get('[type="submit"]').click()   
     });
 
 })
