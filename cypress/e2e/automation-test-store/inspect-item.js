@@ -14,10 +14,13 @@ describe("Inspect Automation Test store items using chain of commands",() => {
         cy.get('.prdocutname').contains('Skinsheen Bronzer Stick').click()
 
     });
-    it("Click on the first item using item text", ()=> {
+    it.only("Click on the first item using item text", ()=> {
         //Cypress Code
         cy.visit("https://www.automationteststore.com/")
-        cy.get('.prdocutname').contains('Skinsheen Bronzer Stick').click()
+        cy.get('.prdocutname').contains('Skinsheen Bronzer Stick').click().then(function(itemHeaderText) {
+            console.log("Selected the following item: " + itemHeaderText.text())
+        })
+        console.log("Test123")
 
     });
     it("Click on the first item with index", ()=> {
